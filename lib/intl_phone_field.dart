@@ -11,7 +11,7 @@ class IntlPhoneField extends StatefulWidget {
   final bool obscureText;
   final TextAlign textAlign;
   final VoidCallback? onTap;
-  
+
   /// {@macro flutter.widgets.editableText.readOnly}
   final bool readOnly;
   final FormFieldSetter<PhoneNumber>? onSaved;
@@ -332,7 +332,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                 );
             },
             validator: validator,
-            maxLength: _selectedCountry['max_length'],
+            maxLength: _selectedCountry['max_length'] + 3,
             keyboardType: widget.keyboardType,
             inputFormatters: widget.inputFormatters,
             enabled: widget.enabled,
